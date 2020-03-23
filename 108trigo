@@ -1,0 +1,66 @@
+#! /usr/bin/env python3
+# -*- coding: Utf-8 -*
+##
+## EPITECH PROJECT, 2019
+## 108trigo_2019
+## File description:
+## 108trigo
+##
+
+import sys
+
+import math
+
+from error_handling.usage import usage
+
+from my_math_functions.my_cos import my_cos
+from my_math_functions.my_cosh import my_cosh
+from my_math_functions.my_sin import my_sin
+from my_math_functions.my_sinh import my_sinh
+from my_math_functions.my_exp import my_exp
+
+MATH_FUNCTIONS = {
+    "COS": my_cos,
+    "COSH": my_cosh,
+    "SIN": my_sin,
+    "SINH": my_sinh,
+    "EXP": my_exp,
+}
+
+def main(ac: int, av: list):
+
+    if ac == 2 and av[1] == "-h":
+        usage()
+        return 0
+
+    if ac <= 2 :
+        usage()
+        return 84
+
+    nb_components_matrice = ac - 2
+    matrice_side = math.sqrt(nb_components_matrice)
+
+    if not matrice_side.is_integer() :
+        usage()
+        return 84
+
+    for i in range(2, ac) :
+        try :
+            float(av[i])
+        except :
+            usage()
+            return 84
+
+    if av[1] not in MATH_FUNCTIONS :
+        usage()
+        return 84
+
+    matrix = list()
+
+    for i in range(2, ac) :
+        matrix.append(float(av[i]))
+
+    return MATH_FUNCTIONS[av[1]](matrix)
+
+if __name__ == "__main__":
+    sys.exit(main(len(sys.argv), sys.argv))
