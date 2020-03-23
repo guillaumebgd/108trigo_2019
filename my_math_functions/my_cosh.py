@@ -27,19 +27,32 @@ def my_cosh(A : list) :
     if I is False :
         return 84
 
-    Result = I
-
-    A_pow_2 = my_same_square_matrices_mul(A, A)
-    A = A_pow_2
     n = 2
-    m = 2
+    m = 3
 
-    for i in range(0, 10) :
-        n_serie = my_matrice_div_by_float(A, n)
-        Result = my_same_square_matrices_add(Result, n_serie)
-        A = my_same_square_matrices_mul(A, A_pow_2)
-        m += 1
-        n *= m
+    A_pow2 = my_same_square_matrices_mul(A, A)
+    Tmp = A_pow2
+    Tmp_1 = my_matrice_div_by_float(Tmp, n)
+    Result = my_same_square_matrices_sub(I, Tmp_1)
+    leave_calc = False
+
+    for i in range(0, 200) :
+        Cmp = Result
+        for j in range(0, 2) :
+            n *= m
+            m += 1
+        Tmp = my_same_square_matrices_mul(Tmp, A_pow2)
+        Tmp_1 = my_matrice_div_by_float(Tmp, n)
+        Result = my_same_square_matrices_add(Result, Tmp_1)
+        for j in range(0, len(A)) :
+            if round(Cmp[j], 2) == round(Result[j], 2) :
+                leave_calc = True
+            else :
+                leave_calc = False
+                break
+
+        if leave_calc == True :
+            break
 
     my_print_matrix(Result, side_len)
     return 0
