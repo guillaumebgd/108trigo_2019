@@ -33,7 +33,7 @@ def my_cosh(A : list) :
     A_pow2 = my_same_square_matrices_mul(A, A)
     Tmp = A_pow2
     Tmp_1 = my_matrice_div_by_float(Tmp, n)
-    Result = my_same_square_matrices_sub(I, Tmp_1)
+    Result = my_same_square_matrices_add(I, Tmp_1)
     leave_calc = False
 
     for i in range(0, 200) :
