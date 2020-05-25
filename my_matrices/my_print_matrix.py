@@ -18,7 +18,7 @@ def my_print_matrix(matrix : list, side_len : int) :
         return (False)
 
     for i in range(1, len_matrix + 1) :
-        if i % side_len == 0 and i > 1 :
+        if i % side_len == 0:
             sys.stdout.write("%.2f\n" % matrix[i - 1])
         else :
             sys.stdout.write("%.2f\t" % matrix[i - 1])
