@@ -8,15 +8,12 @@
 
 from math import sqrt
 
-from my_matrices.my_same_matrices_mul import my_same_square_matrices_mul
-from my_matrices.my_same_matrices_add import my_same_square_matrices_add
-from my_matrices.my_same_matrices_sub import my_same_square_matrices_sub
-
-from my_matrices.my_matrice_div_by_float import my_matrice_div_by_float
-
-from my_matrices.my_get_identity_matrix import my_get_identity_matrix
-
-from my_matrices.my_print_matrix import my_print_matrix
+from lib.my_matrices.my_same_matrices_mul import my_same_square_matrices_mul
+from lib.my_matrices.my_same_matrices_add import my_same_square_matrices_add
+from lib.my_matrices.my_same_matrices_sub import my_same_square_matrices_sub
+from lib.my_matrices.my_matrice_div_by_float import my_matrice_div_by_float
+from lib.my_matrices.my_get_identity_matrix import my_get_identity_matrix
+from lib.my_matrices.my_print_matrix import my_print_matrix
 
 def my_cos(A : list) :
 

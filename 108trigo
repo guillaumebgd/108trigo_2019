@@ -11,13 +11,13 @@ import sys
 
 import math
 
-from error_handling.usage import usage
+from src.error_handling.usage import usage
 
-from my_math_functions.my_cos import my_cos
-from my_math_functions.my_cosh import my_cosh
-from my_math_functions.my_sin import my_sin
-from my_math_functions.my_sinh import my_sinh
-from my_math_functions.my_exp import my_exp
+from lib.my_math_functions.my_cos import my_cos
+from lib.my_math_functions.my_cosh import my_cosh
+from lib.my_math_functions.my_sin import my_sin
+from lib.my_math_functions.my_sinh import my_sinh
+from lib.my_math_functions.my_exp import my_exp
 
 MATH_FUNCTIONS = {
     "COS": my_cos,
