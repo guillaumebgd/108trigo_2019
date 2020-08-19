@@ -6,7 +6,7 @@ A first year Epitech math project done during the 2nd semester.<br>
 
 ## Description
 
-This project has for goal to compute certain mathematical functions to [squared matrices](https://en.wikipedia.org/wiki/Square_matrix).<br>
+This project has for goal to compute certain mathematical functions to [square matrices](https://en.wikipedia.org/wiki/Square_matrix).<br>
 
 The mathematical functions asked to be covered are the followings:
 
